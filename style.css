@@ -9,7 +9,12 @@
     align-items: center; */
     margin: 0 auto;
     max-width: 96%;
+    min-height: 50vh;
+    border: 1px solid rgb(219, 247, 247);
     position: relative;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 7px 16px 24px 0px rgba(0,0,0,0.11);
 }
 .todolist{
     width: 100%;
@@ -71,9 +76,20 @@ li{
 .mytask:focus{
     outline: none;
 }
+.mytask{
+    border-radius: .5rem;
+    border: 1px solid rgb(219, 247, 247);
+}
 .remove-btn{
     padding: .7rem 1.2rem;
     border-radius: 2rem;
     border: none;
     cursor: pointer;
+}
+
+@media (min-width:1107px) {
+    .container{
+        max-width: 40%;
+        
+    }
 }
