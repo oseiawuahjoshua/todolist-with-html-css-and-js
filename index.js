@@ -31,16 +31,19 @@ addTask.addEventListener('click', ()=>{
 
 })
 
-function createTask(){
-    const task =document.createElement('LI')
-    const checkbox= document.createElement('input')
-    checkbox.type="checkbox"
-    task.appendChild(checkbox)
-    todolistContainer.append(task);
-}
+
 todolistContainer.addEventListener('click', (event)=>{
     if(event.target.tagName === 'BUTTON'){
         event.target.parentNode.remove();
     }
 })
+function displayDate(){
+    const dateToday= document.querySelector('.date')
+    let date= new Date();
+    let year = date.getFullYear()
+    let month= date.getMonth()
+    let day= date.getDay()
 
+    dateToday.innerHTML= day + '-' + month + '-' + year ;
+}
+window.onload= displayDate();
